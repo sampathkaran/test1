@@ -1,9 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('Bees Bees') {
+    stage('Download') {
       steps {
-        echo 'Buzz, Bees, Buzz!'
+        sh 'echo "artifact file" > generatedFile.txt'
+        archiveArtifacts(artifacts: 'generatedFile.txt', fingerprint: true)
       }
     }
 
