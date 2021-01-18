@@ -19,7 +19,7 @@ echo "not a artifact file" > css/build.css
 echo "artifact file" > css/build.min.css
 
 '''
-        archiveArtifacts(artifacts: '*.min.*', fingerprint: true)
+        archiveArtifacts(artifacts: '**/*.min.*', fingerprint: true)
       }
     }
 
